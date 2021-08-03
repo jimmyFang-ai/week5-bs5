@@ -1,0 +1,156 @@
+
+
+ Bootstrap 5  - 環境建立 (資源:六角學院 Bootstrap 5 新手教學實戰營 )
+  -環境建立 
+       - 載入 css cdn  
+       <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> -->
+       - 載入 js cdn   
+                如果要使用使用工具提示或是彈出提示框先載入Popper 再 JavaScript 插件
+                
+                Popper
+                <!-- <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> -->
+
+                JavaScript 插件
+                <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script> --> -->
+
+
+
+      表單設計 (form):
+         input 欄位: 
+              禁用 (disable) : 
+                 -說明: 在 input 上加入布林屬性 disabled 使其外觀呈現灰色，並移除 pointer事件。
+
+                 -使用方式: 在class樣式添加 (disable)，即可運行
+               
+              僅能閱讀 (readonly):
+                 -說明: 在 input 上加入布林屬性 readonly 以防止修改 input 的值。僅能閱讀的input 顯示較淡（就像禁用的輸入），但保留標準游標。
+
+                 -使用方式: 在input 欄位加上 readonly 即可運行
+
+
+         
+
+
+       week5 bs5 後台表單規劃流程
+   
+      bs5套件預設:
+
+       字體、大小、行高 (bs5 已載入  font-size: 1rem  line-hight: 1.5    引用h1~h6  class= h1~ h6 ) 
+
+       顏色(預設):  
+            primary:    藍色
+            secondary:  深灰色
+            success:    綠色 (ex: toast訊息成功顏色)
+            danger:     紅色 (ex: delete 按鈕)
+            warning:    黃色
+            light:      白色
+            dark:       黑色
+
+
+       間距:
+          margin
+          padding
+         
+           t: top
+           b: bottom
+           s: start(左邊)
+           e: end(右邊)
+           x: 水平(左右)
+           y: 垂直(上下)
+
+           ex: 
+             ms: margin-left
+             my: margin-top margin-bottom
+
+           推擠數字: 0 1 2 3 4 5 auto
+           空間倍數($spacer)預設 : $spacer: 1rem    0 = 0rem    1 = $spacer * 0.25rem (4px)   2 = $spacer * 0.5rem (8px)
+
+
+      格線系統:
+         container (容器)內層標籤一定要加 .row         
+         container-fluid (滿版max-width: 100%)
+            
+             ex: 
+               軸線:  .row ( x軸 ) 、 .col( y軸 )
+
+               ( 4個卡片為一排 col-3)
+                <div class="container">
+                    <div class="row">
+                       <div class="col-3"></div>
+                       <div class="col-3"></div>
+                       <div class="col-3"></div>
+                       <div class="col-3"></div>
+                      </div>
+                </div>
+
+         
+       圖片 (img):
+           img-fluid (圖片滿版置中: max-width: 100% hight: 0 auto  vertical-align: middle;)
+
+
+       內容:
+          表格 (Tables)
+
+      
+       元件:
+          分頁(Pagination)
+          卡片(card)
+          互動視窗(modal)
+          畫布(Offcanvas)
+
+  
+       部落格留言板:
+           使用ckeditor5 套件 https://ckeditor.com/docs/ckeditor5/latest/builds/guides/quick-start.html
+
+      * 設計稿中使用到哪些元件？
+    * Assignment 頁面
+        * Dropdowns (https://getbootstrap.com/docs/5.0/components/dropdowns/#single-button)
+        * List group (https://getbootstrap.com/docs/5.0/components/list-group/#javascript-behavior)
+        * Card (https://getbootstrap.com/docs/5.0/components/card/#header-and-footer)
+
+    * Admin 頁面
+        * Tables (https://getbootstrap.com/docs/5.0/content/tables/#hoverable-rows)
+        * Collapse (https://getbootstrap.com/docs/5.0/components/collapse/)
+        * Modal (https://getbootstrap.com/docs/5.0/components/modal/)
+        * Pagination (https://getbootstrap.com/docs/5.0/components/pagination/#disabled-and-active-states)
+
+    * 共用
+        * Nav (https://getbootstrap.com/docs/5.0/components/navs-tabs/#vertical)
+        * Button (https://getbootstrap.com/docs/5.0/components/buttons/)
+
+
+   * 通用類別
+       * Flex (https://getbootstrap.com/docs/5.0/utilities/flex/#enable-flex-behaviors)
+       * Flex media object (https://getbootstrap.com/docs/5.0/utilities/flex/#media-object)
+       * Spacing (https://getbootstrap.com/docs/5.0/utilities/spacing/)
+       * Colors (https://getbootstrap.com/docs/5.0/utilities/colors/)
+
+
+
+       navbar(adise) (寫死固定在左側)
+         position: fixed;
+         min-width: 200px;(最小寬度維持)
+         min-height: 100vh;(最小高度滿版，不會因為載具不同而跑版)
+
+         -navbar-link(左側border線，如果直接寫死，會因為li 內的padding 而被拉長)
+            -解法: 
+               使用偽元素: 
+                        .nav-link {
+                            padding: 12px 32px;
+                            position: relative;
+                               }
+
+                        .nav-link.active::before {
+                             content: "";
+                             position: absolute;
+                             left: 0;
+                             width: 4px;
+                             height: 32px;
+                             border: 4px solid #198754;
+                               }
+
+
+       main (主要內容)
+          margin-left: 200px; (因為 navbar(adise) 佔據200px，要補上不然沒空間置放)
+
+       
