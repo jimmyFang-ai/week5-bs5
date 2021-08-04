@@ -21,43 +21,55 @@
 
 <div class="wrap d-flex">
   <!-- navbar-aside -->
-  <div class="navbar-aside">
+  <div class="navbar-aside  d-flex  flex-column justify-content-between py-5">
     <ul class="nav flex-column">
-     <li class="nav-brand mb-5">
+     <li class="nav-brand mb-5 ms-5">
         <img src="./assets/images/logo-ANSWER.svg" alt="logo">
      </li>
      <li class="nav-item">
-      <span class="material-icons">insert_chart</span>
-      <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+       <a class="nav-link" aria-current="page" href="#">
+         <span class="material-icons me-3">insert_chart</span>
+         Dashboard
+      </a>
     </li>
     <li class="nav-item">
-      <span class="material-icons">question_answer</span>
-      <a class="nav-link" href="#">Question</a>
+         <a class="nav-link" href="#">
+           <span class="material-icons me-3">question_answer</span>
+          Question
+        </a>
     </li>
     <li class="nav-item">
-      <span class="material-icons">assignment</span>
-      <a class="nav-link" href="#">Assignment</a>
+      <a class="nav-link" href="#">
+        <span class="material-icons me-3">assignment</span>
+        Assignment
+      </a>
     </li>
     <li class="nav-item">
-      <span class="material-icons">video_library</span>
-      <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Course</a>
+      <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+        <span class="material-icons me-3">video_library</span>
+        Course
+      </a>
     </li>
     <li class="nav-item">
-      <span class="material-icons">people</span>
-      <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+      <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">
+        <span class="material-icons me-3">people</span>
+        Admin
+      </a>
     </li>
     <li class="nav-item">
-      <span class="material-icons">settings</span>
-      <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Settings</a>
+      <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+        <span class="material-icons me-3">settings</span>
+        Settings
+      </a>
     </li>
     </ul>
-    <div class="d-flex align-items-center">
-      <div class="flex-shrink-0">
-        <img src="./assets/images/andychen.jpeg" alt="andychen">
+    <div class="d-flex align-items-center ms-5 ">
+      <div>
+        <img class="rounded-circle" src="./assets/images/andychen.jpeg" alt="andychen">
       </div>
-      <div class="flex-grow-1 ms-3">
-          <p>Andy Chen</p>
-          <p>andy0401@mail.com</p>
+      <div class="ms-3">
+          <p class="mb-1">Andy Chen</p>
+          <span class="text-sm text-muted">andy0401@mail.com</span>
       </div>
     </div>
   </div>

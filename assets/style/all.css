@@ -12281,26 +12281,52 @@ fieldset:disabled .btn {
   }
 }
 
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
 .navbar-aside {
   background: #F8F9FA;
-  position: fixed;
   min-width: 296px;
-  min-height: 800px;
-  padding: 32px 0  32px 34px;
+  min-height: 100vh;
 }
 
 .navbar-aside .nav-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 29px;
+  margin-bottom: 5px;
 }
 
 .navbar-aside .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #212529;
+  padding: 12px 32px;
+  position: relative;
+}
+
+.navbar-aside .nav-link:hover {
+  color: #198754;
+}
+
+.navbar-aside .nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 32px;
+  border: 4px solid #198754;
 }
 
 /*# sourceMappingURL=all.css.map */
