@@ -63,9 +63,9 @@
              my: margin-top margin-bottom
 
            推擠數字: 0 1 2 3 4 5 auto
-           空間倍數($spacer)預設 : $spacer: 1rem    0 = 0rem    1 = $spacer * 0.25rem (4px)   2 = $spacer * 0.5rem (8px)
-
-
+           空間倍數($spacer)預設 : 
+                $spacer: 1rem     0 = 0rem    1 = $spacer * 0.25rem (4px)   2 = $spacer * 0.5rem (8px)
+                                  3 = 1rem (16px)    4 = 1.5rem(24px)    5 = 3rem (48px)
       格線系統:
          container (容器)內層標籤一定要加 .row         
          container-fluid (滿版max-width: 100%)
@@ -127,6 +127,16 @@
 
 
 
+
+作業規劃:
+      元件:
+        navbar(adise)
+        navbar(top)
+        pagination
+        modal (edit 和 new 都是同一個 ， modalView使用Collapse)
+
+
+
        navbar(adise) (寫死固定在左側)
          position: fixed;
          min-width: 200px;(最小寬度維持)
@@ -153,4 +163,5 @@
        main (主要內容)
           margin-left: 200px; (因為 navbar(adise) 佔據200px，要補上不然沒空間置放)
 
+        
        
