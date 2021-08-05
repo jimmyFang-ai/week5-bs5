@@ -12297,6 +12297,10 @@ fieldset:disabled .btn {
   font-weight: bolder;
 }
 
+.text-gary-400 {
+  color: #ced4da;
+}
+
 .rounded-circle {
   border-radius: 50%;
 }
