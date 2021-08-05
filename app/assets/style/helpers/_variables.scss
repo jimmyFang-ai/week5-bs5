@@ -253,7 +253,7 @@ $spacers: (
   1: $spacer * .25, //4px
   2: $spacer * .5,  //8px
   3: $spacer,       //16px
-  4: $spacer * 1.5,     
+  4: $spacer * 1.5, //24px    
   5: $spacer * 2,   //32px    $spacer * 3(預設) 
   6: $spacer *2.5,  //40px
   7: $spacer *3     //48px
@@ -1050,12 +1050,12 @@ $pagination-padding-x-sm:           .5rem !default;
 $pagination-padding-y-lg:           .75rem !default;
 $pagination-padding-x-lg:           1.5rem !default;
 
-$pagination-color:                  $link-color !default;
-$pagination-bg:                     $white !default;
+$pagination-color:                  $success  !default;               //$link-color !default;
+$pagination-bg:                     $white      !default;
 $pagination-border-width:           $border-width !default;
 $pagination-border-radius:          $border-radius !default;
 $pagination-margin-start:           -$pagination-border-width !default;
-$pagination-border-color:           $gray-300 !default;
+$pagination-border-color:            $success  !default;                //$gray-300 !default;
 
 $pagination-focus-color:            $link-hover-color !default;
 $pagination-focus-bg:               $gray-200 !default;
@@ -1063,11 +1063,11 @@ $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 $pagination-focus-outline:          0 !default;
 
 $pagination-hover-color:            $link-hover-color !default;
-$pagination-hover-bg:               $gray-200 !default;
+$pagination-hover-bg:               $success  !default;            //$gray-200 !default;
 $pagination-hover-border-color:     $gray-300 !default;
 
 $pagination-active-color:           $component-active-color !default;
-$pagination-active-bg:              $component-active-bg !default;
+$pagination-active-bg:              $success  !default;  //$component-active-bg !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 
 $pagination-disabled-color:         $gray-600 !default;

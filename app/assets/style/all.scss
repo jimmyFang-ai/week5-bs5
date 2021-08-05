@@ -5,11 +5,15 @@
 
 // helpers
 @import "helpers/utilities.scss";
-@import "helpers/base";
 
 
 // component
-@import './components/navbar-aside';
+  //modal 
+@import "./components/modal/visitMoal";
+@import "./components/modal/addListModal";
+@import "./components/modal/editListModal";
 
-// 分頁
-@import './pages/admin';
+
+@import "./components/navbar-aside";
+
+
