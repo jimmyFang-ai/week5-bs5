@@ -6336,7 +6336,7 @@ fieldset:disabled .btn {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 480px;
     margin: 1.75rem auto;
   }
   .modal-dialog-scrollable {
@@ -12293,8 +12293,17 @@ fieldset:disabled .btn {
   font-size: 1.25rem;
 }
 
+.text-bold {
+  font-weight: bolder;
+}
+
 .rounded-circle {
   border-radius: 50%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
 }
 
 .navbar-aside {
