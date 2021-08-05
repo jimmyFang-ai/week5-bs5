@@ -529,12 +529,12 @@ $mark-bg:                     #fcf8e3 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .5rem !default;
-$table-cell-padding-x:        .5rem !default;
-$table-cell-padding-y-sm:     .25rem !default;
-$table-cell-padding-x-sm:     .25rem !default;
+$table-cell-padding-y:         .25rem !default;     //   .5rem !default;
+$table-cell-padding-x:         0     !default;     //   .5rem !default;
+// $table-cell-padding-y-sm:     .25rem !default;
+// $table-cell-padding-x-sm:     .25rem !default;
 
-$table-cell-vertical-align:   top !default;
+$table-cell-vertical-align:    middle !default;    //top !default;
 
 $table-color:                 $body-color !default;
 $table-bg:                    transparent !default;
