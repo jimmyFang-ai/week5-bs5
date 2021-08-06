@@ -21,7 +21,7 @@
 
 <div class="wrap d-flex">
   <!-- navbar-aside -->
-  <div class="navbar-aside  d-flex  flex-column justify-content-between py-5">
+  <div class="navbar-aside bg-light d-flex  flex-column justify-content-between py-5">
     <ul class="nav flex-column">
      <li class="nav-brand mb-5 ms-5">
         <img src="./assets/images/logo-ANSWER.svg" alt="logo">
@@ -87,10 +87,10 @@
              <li class="nav-item">
                   <!-- Button trigger modal -->
                    <button type="button" class="btn d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <span class="material-icons text-success"> add</span>Add New Admin
+                     <a href="#" class="d-flex"> <span class="material-icons text-success"> add</span>Add New Admin</a>
                   </button>
 
-                  <!-- Modal -->
+                  <!-- addNew Modal -->
                   <div class="modal modal-md " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                        <div class="modal-dialog">
                            <div class="modal-content px-5 pt-5 pb-3 ">
@@ -202,46 +202,146 @@
               </td>
               <td class="text-end" >
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"><span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                     <div class="modal-dialog">
-                        <div class="modal-content">
-                           <div class="modal-header">
-                             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                              ...
-                       </div>
-                            <div class="modal-footer">
-                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                           </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
                         </div>
-                    </div>
-                  </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"><span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -257,46 +357,146 @@
               </td>
               <td class="text-end">
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"><span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                                  ...
-                          </div>
-                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                       </div>
-                     </div>
-                 </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"> <span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -312,46 +512,146 @@
               </td>
               <td class="text-end">
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"><span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                                  ...
-                          </div>
-                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                       </div>
-                     </div>
-                 </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"><span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -367,46 +667,146 @@
               </td>
               <td class="text-end">
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"><span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                                  ...
-                          </div>
-                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                       </div>
-                     </div>
-                 </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"><span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -422,46 +822,146 @@
               </td>
               <td class="text-end">
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"><span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                                  ...
-                          </div>
-                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                       </div>
-                     </div>
-                 </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"><span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -477,46 +977,146 @@
               </td>
               <td class="text-end">
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"><span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                                  ...
-                          </div>
-                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                       </div>
-                     </div>
-                 </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"><span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -532,46 +1132,146 @@
               </td>
               <td class="text-end">
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"><span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                                  ...
-                          </div>
-                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                       </div>
-                     </div>
-                 </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"><span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -587,46 +1287,146 @@
                  </td>
               <td class="text-end">
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"> <span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                                  ...
-                          </div>
-                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                       </div>
-                     </div>
-                 </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"><span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -642,46 +1442,146 @@
               </td>
               <td class="text-end">
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"><span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                                  ...
-                          </div>
-                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                       </div>
-                     </div>
-                 </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"><span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -697,46 +1597,146 @@
                  </td>
               <td class="text-end">
                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#visitModal">
-                      <span class="material-icons">visibility</span>
+                    <a href="#"><span class="material-icons">visibility</span></a>
                   </button>
                   <!--visitModal -->
-                 <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                       </div>
-                       <div class="modal-body">
-                                  ...
-                          </div>
-                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                       </div>
-                     </div>
-                 </div>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                      <span class="material-icons">edit</span>
-                  </button>
-                  <!-- editModal -->
-                  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+                  <div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content  p-5">
+                        <div class="modal-body p-0 text-start">
+                              <div class="container d-flex align-items-center justify-content-between p-0 mb-5">
+                                <div class="flex-shrink-0 me-4">
+                                  <img src="https://i.imgur.com/Wmu4f2b.jpg" alt="user">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <div class="views-header d-flex justify-content-between">
+                                    <span class="mb-2">#1</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="views-body">
+                                    <h6 class="mb-0">Admin</h6>
+                                    <h4 class="mb-2">Emir Wicks</h4>
+                                    <p class="text-sm text-muted mb-">emir.wicks@mail.com</p>
+                                  </div>
+                                  <div class="views-footer d-flex justify-content-between">
+                                    <span class="text-sm bg-light">Verified</span>
+                                    <button class="btn collapsed bg-white text-success p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <span class="material-icons expand_less">
+                                         expand_less
+                                       </span>
+                                       <span class="material-icons expand_more">
+                                         expand_more
+                                       </span>
+                                   </button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                
+                              <!-- 折疊 (Collapse) -->
+                        <div class="collapse" id="collapseExample">
+                             <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn  text-danger text-bold border-danger rounded-0 my-0 mx-3 px-5" data-bs-dismiss="modal">Deactivate</button>
+                                    <button type="button" class="btn  bg-success  text-white text-bold rounded-0 px-5">Edit</button>
+                             </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                    <a href="#"> <span class="material-icons">edit</span></a>
+                  </button>
+                  <!-- editModal -->
+                  <div class="modal modal-md " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content px-5 pt-5 pb-3 ">
+                            <div class="modal-header border-bottom-0 py-0 px-0 mb-5">
+                             <h4 class="modal-title" id="exampleModalLabel">Edit Admin</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body p-0 text-start">
+                                <form class="border-bottom-0">
+                                 <div class="account border-bottom pb-2 mb-4">
+                                   <h5 class="mb-3">Account</h5>
+                                   <div class="mb-3">
+                                     <label for="exampleInputEmail1" class="form-label mb-1 text-sm">name</label>
+                                     <input type="name" class="form-control  border-0 bg-light" value="Emir Wicks" id="exampleInputEmail1" readonly>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label for="exampleInputPassword1" class="form-label mb-1 text-sm">Email</label>
+                                     <input type="email" class="form-control border-0 bg-light"  value="emir.wicks@mail.com" id="exampleInputPassword1"  readonly>
+                                   </div>
+                                   </div>
+                                  <div class="pb-2 mb-4 border-bottom">
+                                   <h5 class="mb-3">Verification</h5>
+                                   <div class="d-flex justify-content-between">
+                                     <a  class="d-flex mb-3 text-dark" href="#">
+                                       <span class="material-icons text-success">
+                                       check_circle</span>Unverified</a>
+                                      <span>2020/4/12</span>
+                                   </div>
+                                    <div class="mb-3">
+                                      <input type="button"  class="form-control py-3 text-gary-400 bg-white"  value="Send Verification Mail" disabled>
+                                    </div>
+                                  </div>
+                                   <div class="pb-2 mb-4  border-bottom">
+                                      <h5 class="mb-3">Access Level</h5>
+                                      <select class="form-select form-select-lg mb-3 py-3 text-base text-muted border-dark" aria-label=".form-select-lg example">
+                                      <option selected>Admin</option>
+                                   </select>
+                                   </div>
+                                   <div class="pb-2 mb-4 border-bottom">
+                                     <h5 class="mb-3">Custom Access</h5>
+                                     <div class="form-check mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         Lecture
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Coupon
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Message
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Setting
+                                       </label>
+                                     </div>
+                                     <div class="form-check  mb-3">
+                                       <input class="form-check-input border-dark rounded-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                       <label class="form-check-label" for="flexCheckChecked">
+                                         Task Menu
+                                       </label>
+                                     </div>
+                                   </div>
+                                    <div class="pb-5">
+                                      <h5 class="mb-3">Deactivate Account</h5>
+                                      <a  class="mb-3  d-flex text-danger" href="#"><span class="material-icons text-danger">
+                                       warning
+                                       </span>This cannot be undone!</a>
+                                       <div class="mb-3">
+                                         <input type="button"  class="form-control py-3 text-danger text-bold border-danger "  value="Deactivate This Account" >
+                                       </div>
+                                    </div>
+               
+                                </form>
+                            </div>
+                             <div class="modal-footer border-top-0 p-0">
+                            <button type="button" class="btn  text-success text-bold border-success rounded-0 px-5 my-0 mx-3 " data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn  btn-success  text-bold rounded-0 m-0 px-5">Update</button>
+                           </div>
+                      </div>
+                  </div>
                   </div>
               </td>
             </tr>
@@ -748,9 +1748,9 @@
             <li class="page-item"><a class="page-link" href="#" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
             </svg></a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#" >2</a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item"><a class="page-link" href="#" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
             </svg></a></li>
