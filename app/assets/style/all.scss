@@ -4,9 +4,9 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 // helpers
-@import "helpers/utilities.scss";
-@import "helpers/base";
-
+@import "./helpers/utilities";
+@import "./helpers/base";
+@import "./helpers/mixin";
 // component
  
 @import "./components/navbar-aside";

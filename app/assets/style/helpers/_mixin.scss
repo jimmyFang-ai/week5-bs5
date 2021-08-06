@@ -1,0 +1,22 @@
+// 切換 摺疊選單折疊 (Collapse)
+@mixin   collapse-btn {
+    .expand_more {
+        display: inline-block;
+    }
+
+    .expand_less {
+        display: none;
+    }
+
+    .collapsed .expand_more {
+        display: none;
+    }
+      
+    .collapsed .expand_less {
+        display: inline-block;
+    } 
+}
+
+.collapsed  {
+  @include collapse-btn;
+}
